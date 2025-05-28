@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Product = require('../models/Product');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/ecommerce';
+const MONGODB_URI = 'mongodb+srv://akhil:akhil2004@cluster0.0iooo68.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0';
 
 const sampleProducts = [
   {
