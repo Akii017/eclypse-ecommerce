@@ -11,12 +11,9 @@ const MONGODB_URI = 'mongodb+srv://akhil:akhil2004@cluster0.0iooo68.mongodb.net/
 
 const app = express();
 
-// CORS configuration
-app.use(cors({
-  origin: ['https://eclypse-ecommerce-one.vercel.app', 'http://localhost:5173'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  credentials: true
-}));
+// CORS configuration - more permissive
+app.use(cors());  // Allow all origins temporarily
+app.options('*', cors()); // Enable pre-flight for all routes
 
 app.use(express.json());
 
