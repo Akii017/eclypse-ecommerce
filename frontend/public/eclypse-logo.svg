@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle (eclipse) -->
+  <circle cx="256" cy="256" r="240" stroke="currentColor" stroke-width="32"/>
+  <!-- Inner partial circle creating eclipse effect -->
+  <path d="M256 16C385.455 16 491.478 118.337 495.844 246.933C496.614 260.408 496 274.027 494.006 287.39C474.377 416.431 363.906 512 233.143 512C103.688 512 0 408.312 0 278.857C0 149.402 103.688 45.7143 233.143 45.7143C243.862 45.7143 254.408 46.3551 264.747 47.5991C261.878 47.0546 258.965 16 256 16Z" fill="currentColor"/>
+</svg> 
