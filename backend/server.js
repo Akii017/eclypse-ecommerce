@@ -4,6 +4,9 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
+const initDb = require('./scripts/initDb'); // Path from server.js to scripts/initDb.js
+initDb(); // Seed database on startup
+
 const app = express();
 
 // Middleware
@@ -40,3 +43,4 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 }); 
+
