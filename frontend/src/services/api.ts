@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { CartItem } from '../store/cartSlice';
 
 const API_URL = "https://eclypse-ecommerce-backend.onrender.com/api/" ;
 
@@ -10,8 +9,16 @@ const api = axios.create({
   },
 });
 
+interface OrderItem {
+  productId: string;
+  name: string;
+  price: number;
+  size: string;
+  quantity: number;
+}
+
 export interface OrderData {
-  items: CartItem[];
+  items: OrderItem[];
   shippingAddress: {
     firstName: string;
     lastName: string;
