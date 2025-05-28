@@ -4,13 +4,18 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
-const initDb = require('./scripts/initDb'); // Path from server.js to scripts/initDb.js
+const initDb = require('./scripts/initDb'); // Initialize database with sample data
 initDb(); // Seed database on startup
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// CORS configuration
+app.use(cors({
+  origin: ['https://eclypse-ecommerce-one.vercel.app', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Serve static files from the public directory
