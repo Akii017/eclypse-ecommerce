@@ -93,7 +93,7 @@ export default function HomePage() {
               <ProductCard
                 key={product.id}
                 product={product}
-                onAddToCart={handleAddToCart}
+                //onAddToCart={handleAddToCart}
               />
             ))}
           </div>

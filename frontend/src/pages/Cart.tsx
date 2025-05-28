@@ -2,10 +2,10 @@ import ShippingForm from "../components/Cart/ShippingForm";
 import OrderSummary from "../components/Cart/OrderSummary";
 
 const Cart = () => {
-  const handlePlaceOrder = () => {
+  //const handlePlaceOrder = () => {
     // Handle place order logic
-    console.log("Placing order...");
-  };
+    //console.log("Placing order...");
+  //};
 
   return (
     <div className="min-h-screen pt-24 bg-white">
@@ -15,7 +15,7 @@ const Cart = () => {
             <ShippingForm />
           </div>
           <div>
-            <OrderSummary onPlaceOrder={handlePlaceOrder} />
+            <OrderSummary/>
           </div>
         </div>
       </div>
