@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { CartItem } from '../store/cartSlice';
 
-const API_URL = "https://eclypse-ecommerce-backend.onrender.com/api" ;
+const API_URL = "https://eclypse-ecommerce-backend.onrender.com/api/" ;
 
 const api = axios.create({
   baseURL: API_URL,

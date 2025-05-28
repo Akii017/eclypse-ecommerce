@@ -4,8 +4,8 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
-const initDb = require('./scripts/initDb'); // Initialize database with sample data
-initDb(); // Seed database on startup
+//const initDb = require('./scripts/initDb'); // Initialize database with sample data
+//initDb(); // Seed database on startup
 
 const app = express();
 
