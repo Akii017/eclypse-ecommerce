@@ -30,7 +30,8 @@ const OrderSummary = () => {
     try {
       // Format items to match backend expectations
       const formattedItems = items.map((item) => ({
-        productId: item.id,
+        id: item.id, // Keep the id for compatibility with CartItem
+        productId: item.id, // If the backend expects productId too, keep both
         name: item.name,
         price: item.price,
         size: item.size,

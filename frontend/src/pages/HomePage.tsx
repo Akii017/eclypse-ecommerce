@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import CategoryCard from "../components/CategoryCard";
 import { Product, Category } from "../types";
@@ -50,12 +50,12 @@ const dummyCategories: Category[] = [
 ];
 
 export default function HomePage() {
-  const [cart, setCart] = useState<Product[]>([]);
+  //const [cart, setCart] = useState<Product[]>([]);
 
-  const handleAddToCart = (product: Product) => {
-    setCart([...cart, product]);
+  //const handleAddToCart = (product: Product) => {
+  //  setCart([...cart, product]);
     // In a real app, you would also update the cart in a global state management solution
-  };
+  //};
 
   return (
     <div className="space-y-12">

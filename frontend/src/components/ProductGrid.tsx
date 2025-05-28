@@ -233,6 +233,24 @@ const ProductGrid = () => {
                   onClose={() => setIsSizeChartOpen(false)}
                 />
 
+                {/* Quantity Controls */}
+                <div className="flex items-center space-x-4">
+                  <button
+                    onClick={() => handleQuantityChange(product.id, -1)}
+                    className="w-8 h-8 rounded-lg border border-gray-600 hover:border-white flex items-center justify-center"
+                  >
+                    -
+                  </button>
+                  <span>{quantities[product.id]}</span>
+                  <button
+                    onClick={() => handleQuantityChange(product.id, 1)}
+                    className="w-8 h-8 rounded-lg border border-gray-600 hover:border-white flex items-center justify-center"
+                    disabled={quantities[product.id] >= product.stock}
+                  >
+                    +
+                  </button>
+                </div>
+
                 {/* Action Buttons */}
                 <div className="flex gap-3 pt-4">
                   <button

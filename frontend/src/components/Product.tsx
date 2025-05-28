@@ -5,8 +5,7 @@ import { useAppDispatch } from "../store/hooks";
 import { addItem } from "../store/cartSlice";
 import { productsApi } from "../services/api";
 import SizeChart from "./SizeChart";
-
-const sizes = ["XS", "S", "M", "L", "XL"];
+import { SIZES } from "../constants";
 
 interface ProductData {
   id: string;
@@ -163,7 +162,7 @@ const Product = () => {
                 </button>
               </div>
               <div className="flex gap-4">
-                {product.sizes.map((size) => (
+                {SIZES.map((size) => (
                   <button
                     key={size}
                     onClick={() => setSelectedSize(size)}
@@ -172,6 +171,7 @@ const Product = () => {
                         ? "border-primary text-primary"
                         : "border-gray-600 hover:border-white"
                     }`}
+                    disabled={product && !product.sizes.includes(size)}
                   >
                     {size}
                   </button>

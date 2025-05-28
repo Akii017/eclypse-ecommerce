@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const SIZES = ["XS", "S", "M", "L", "XL"];
+
 const productSchema = new mongoose.Schema({
   id: {
     type: String,
@@ -17,7 +19,7 @@ const productSchema = new mongoose.Schema({
   description: String,
   sizes: [{
     type: String,
-    enum: ['XS', 'S', 'M', 'L', 'XL']
+    enum: SIZES
   }],
   images: [{
     type: String
